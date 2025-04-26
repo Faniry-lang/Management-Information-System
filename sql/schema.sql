@@ -205,3 +205,13 @@ CREATE TABLE reaction_produit (
     FOREIGN KEY(reaction_id) REFERENCES reactions(id)
 );
 
+CREATE TABLE estimations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    produit_id INT NOT NULL,
+    montant_estime DOUBLE NOT NULL,
+    date_estimation DATE NOT NULL,
+    type_estimation ENUM('avant_CRM', 'apres_CRM') NOT NULL, 
+    periode_id INT NOT NULL,
+    FOREIGN KEY(produit_id) REFERENCES produits(id),
+    FOREIGN KEY(periode_id) REFERENCES periode(id)
+);
