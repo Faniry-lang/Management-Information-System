@@ -2,8 +2,7 @@
 
 use app\controllers\BudgetController;
 use app\controllers\CRMController;
-use app\controllers\ListeProduitController;
-use app\controllers\ListeChargeController;
+use app\controllers\LoginController;
 use flight\Engine;
 use flight\net\Router;
 
@@ -12,14 +11,13 @@ use flight\net\Router;
  * @var Engine $app
  */
 
- $prodCtrl = new ListeProduitController();
- $chargeCtrl = new ListeChargeController();
+ $loginCtrl = new LoginController();
  $budgetCtrl = new BudgetController();
  $CRMCtrl = new CRMController();
 
 
-$router->get('/', [$prodCtrl, 'index']);
-$router->get('/login', [$prodCtrl, 'login']);
+$router->get('/', [$loginCtrl, 'index']);
+$router->get('/login', [$loginCtrl, 'login']);
 $router->get('/dashboard/crm/@page', [$CRMCtrl, 'dashboardCRM']);
 $router->get('/popups/@name', [$budgetCtrl, 'GetPopup']);
 
