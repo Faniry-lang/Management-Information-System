@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.4",
+    "tailwindcss": "^4.1.4"
+  },
+  "name": "management-information-system",
+  "version": "1.0.0",
+  "description": "Use this skeleton application to quickly setup and start working on a new Flight PHP application. This application uses the latest version of Flight PHP v3.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i public/assets/css/main.css -o public/assets/css/output.css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
